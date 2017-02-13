@@ -26,7 +26,22 @@ Or install it yourself as:
 You can use the helper methods directly in your `seeds.rb`.
 
 * `seed(model, find_or_create_by, update_with = {})`
+
+
+  Finds the `model` record by the attributes provided by `find_or_create_by` or
+  creates a new record if it doesn't exist yet. The attributes provided by
+  `update_with` are updated in any case.
+* `seed_once(model, find_or_create_by, create_with = {})`
+
+
+  Finds the `model` record by the attributes provided by `find_or_create_by` or
+  creates a new record if it doesn't exist yet. The attributes provided by
+  `create_with` are only applied the first time, when the record gets created.
 * `seed_file(name)`
+
+
+  Seeds a file, whereas the `name` is the file name. The path root is
+  `Rails.root.join('db/seeds')`.
 
 Example:
 
@@ -46,4 +61,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/panter/seed\_box.
+Bug reports and pull requests are welcome on GitHub at https://github.com/panter/seed_box.

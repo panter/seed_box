@@ -13,12 +13,12 @@ module SeedBox
     handle_errors(record, find_or_create_by, update_with)
   end
 
-  def seed_once(model, find_or_create_by, update_with = {})
-    record = model.where(find_or_create_by).first_or_initialize(update_with)
+  def seed_once(model, find_or_create_by, create_with = {})
+    record = model.where(find_or_create_by).first_or_initialize(create_with)
 
     record.save
 
-    handle_errors(record, find_or_create_by, update_with)
+    handle_errors(record, find_or_create_by, create_with)
   end
 
   def seed_file(name)
