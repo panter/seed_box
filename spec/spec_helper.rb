@@ -14,6 +14,7 @@ ActiveRecord::Schema.define version: 0 do
 end
 
 class SeededUser < ActiveRecord::Base
+  validates :first_name, presence: true
 end
 
 RSpec.configure do |config|

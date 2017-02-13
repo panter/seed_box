@@ -24,6 +24,16 @@ RSpec.describe OmniSeeds do
 
         expect(SeededUser.count).to eq 1
       end
+
+      it 'raises an error if a validation error occurs' do
+        expect {
+          subject.seed(SeededUser, { last_name: 'Bluth' })
+        }.to raise_error(
+          RuntimeError,
+          "Couldn't save SeededUser (First name can't be blank) with provided " \
+          "data: {:last_name=>\"Bluth\"}, {}"
+        )
+      end
     end
 
     context 'with 2 parameter find_or_create_by and update_with given' do
@@ -107,6 +117,16 @@ RSpec.describe OmniSeeds do
         expect(SeededUser.count).to eq 2
         expect(SeededUser.first).to have_attributes first_name: 'Go', last_name: 'Bluth'
         expect(SeededUser.last).to have_attributes first_name: 'Gob', last_name: 'Bluth'
+      end
+
+      it 'raises an error if a validation error occurs' do
+        expect {
+          subject.seed_once(SeededUser, { last_name: 'Bluth' })
+        }.to raise_error(
+          RuntimeError,
+          "Couldn't save SeededUser (First name can't be blank) with provided " \
+          "data: {:last_name=>\"Bluth\"}, {}"
+        )
       end
     end
   end
