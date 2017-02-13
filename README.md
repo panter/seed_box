@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/panter/seed_box.svg?branch=master)](https://travis-ci.org/panter/seed_box)
+
 # SeedBox
 
 Provides omnipotent seeds for rails.
