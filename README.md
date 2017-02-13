@@ -23,6 +23,8 @@ Or install it yourself as:
 
 ## Usage
 
+### Seed helpers
+
 You can use the helper methods directly in your `seeds.rb`.
 
 * `seed(model, find_or_create_by, update_with = {})`
@@ -31,12 +33,14 @@ You can use the helper methods directly in your `seeds.rb`.
   Finds the `model` record by the attributes provided by `find_or_create_by` or
   creates a new record if it doesn't exist yet. The attributes provided by
   `update_with` are updated in any case.
+
 * `seed_once(model, find_or_create_by, create_with = {})`
 
 
   Finds the `model` record by the attributes provided by `find_or_create_by` or
   creates a new record if it doesn't exist yet. The attributes provided by
   `create_with` are only applied the first time, when the record gets created.
+
 * `seed_file(name)`
 
 
@@ -52,6 +56,30 @@ seed User, { email: 'job@bluth.com' }, {
   avatar: seed_file('gob.jpg')
 }
 ```
+
+### Development / Production seeds
+
+This gem also provides a separation between development and production seeds. Usually the production seeds are a subset of the development seeds.
+
+Additionally to the standard rails rake task `db:seed` there is
+`db:seed:production` which loads the seeds from the file
+`db/seeds.production.rb` if it exists.
+
+The rake task `db:seed` loads the seeds from `db/seeds.production.rb` if it
+exists as well.
+
+The following list summarizes the different seeds:
+
+* `rake db:seed`
+
+
+  loads `db/seeds.production.rb` (if it exists) and
+  `db/seeds.rb`
+
+* `rake db:seed:production`
+
+
+   loads `db/seeds.production.rb` (if it exists)
 
 ## Development
 
