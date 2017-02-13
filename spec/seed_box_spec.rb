@@ -18,6 +18,12 @@ RSpec.describe SeedBox do
         expect(SeededUser.last).to have_attributes first_name: 'Gob'
       end
 
+      it 'returns the created record' do
+        expect(
+          subject.seed(SeededUser, { first_name: 'Gob' })
+        ).to eq SeededUser.first
+      end
+
       it 'does not create a second record when executed twice' do
         subject.seed(SeededUser, { first_name: 'Gob' })
         subject.seed(SeededUser, { first_name: 'Gob' })
@@ -42,6 +48,12 @@ RSpec.describe SeedBox do
 
         expect(SeededUser.count).to eq 1
         expect(SeededUser.last).to have_attributes first_name: 'Gob', last_name: 'Bluth'
+      end
+
+      it 'returns the created record' do
+        expect(
+          subject.seed(SeededUser, { first_name: 'Gob' })
+        ).to eq SeededUser.first
       end
 
       it 'does not create a second record when executed twice' do

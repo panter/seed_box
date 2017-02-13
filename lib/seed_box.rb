@@ -28,7 +28,7 @@ module SeedBox
   private
 
   def handle_errors(record, find_or_create_by, update_with)
-    return true if record.valid?
+    return record if record.valid?
 
     raise "Couldn't save #{record.class} " +
       "(#{record.errors.full_messages.join(', ')}) with provided data: " +
