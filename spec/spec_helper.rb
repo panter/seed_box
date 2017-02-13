@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "omni_seeds"
+require "seed_box"
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',

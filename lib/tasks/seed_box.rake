@@ -10,7 +10,7 @@ namespace :db do
   # end
 
   task :seed_helper do
-    require 'omni_seeds'
-    include OmniSeeds
+    require 'seed_box'
+    include SeedBox
   end
 end

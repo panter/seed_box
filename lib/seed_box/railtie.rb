@@ -1,7 +1,7 @@
-module OmniSeeds
+module SeedBox
   class Railtie < Rails::Railtie
     rake_tasks do
-      load 'tasks/omni_seeds.rake'
+      load 'tasks/seed_box.rake'
     end
   end
 end

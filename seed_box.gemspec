@@ -1,10 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omni_seeds/version'
+require 'seed_box/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'omni_seeds'
-  spec.version       = OmniSeeds::VERSION
+  spec.name          = 'seed_box'
+  spec.version       = SeedBox::VERSION
   spec.authors       = ['Alexis Reigel']
   spec.email         = ['mail@koffeinfrei.org']
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Enhances the standard rails seeds and the rake tasks
                           with helper methods to enable omnipotent and easier
                           maintenance of seeds.}
-  spec.homepage      = "https://github.com/panter/omni_seeds"
+  spec.homepage      = "https://github.com/panter/seed_box"
   spec.license       = "LGPL-3.0"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

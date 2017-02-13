@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-RSpec.describe OmniSeeds do
+RSpec.describe SeedBox do
   # create a class which includes the module under test so we can easily test
   # the methods
-  subject { Class.new { include OmniSeeds }.new }
+  subject { Class.new { include SeedBox }.new }
 
   it 'has a version number' do
-    expect(OmniSeeds::VERSION).not_to be nil
+    expect(SeedBox::VERSION).not_to be nil
   end
 
   describe '.seed' do

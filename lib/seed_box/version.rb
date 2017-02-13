@@ -1,3 +1,3 @@
-module OmniSeeds
+module SeedBox
   VERSION = "0.1.0"
 end

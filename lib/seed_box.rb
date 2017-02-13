@@ -1,10 +1,10 @@
 require 'rails'
 require 'active_record'
 
-require 'omni_seeds/version'
-require 'omni_seeds/railtie'
+require 'seed_box/version'
+require 'seed_box/railtie'
 
-module OmniSeeds
+module SeedBox
   def seed(model, find_or_create_by, update_with = {})
     record = model.where(find_or_create_by).first_or_initialize
 

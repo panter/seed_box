@@ -1,4 +1,4 @@
-# OmniSeeds
+# SeedBox
 
 Provides omnipotent seeds for rails.
 
@@ -10,7 +10,7 @@ enable omnipotent and easier maintenance of seeds.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omni_seeds'
+gem 'seed_box'
 ```
 
 And then execute:
@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omni_seeds
+    $ gem install seed_box
 
 ## Usage
 
@@ -46,4 +46,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/panter/omni_seeds.
+Bug reports and pull requests are welcome on GitHub at https://github.com/panter/seed\_box.
