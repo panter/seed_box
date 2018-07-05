@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/seed_box.svg)](https://badge.fury.io/rb/seed_box)
 [![Build Status](https://travis-ci.org/panter/seed_box.svg?branch=master)](https://travis-ci.org/panter/seed_box)
 
 # SeedBox
