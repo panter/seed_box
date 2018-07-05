@@ -1,5 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/seed_box.svg)](https://badge.fury.io/rb/seed_box)
 [![Build Status](https://travis-ci.org/panter/seed_box.svg?branch=master)](https://travis-ci.org/panter/seed_box)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d5ab1518113fb181b470/maintainability)](https://codeclimate.com/github/panter/seed_box/maintainability)
 
 # SeedBox
 
