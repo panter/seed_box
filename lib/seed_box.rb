@@ -14,11 +14,9 @@ module SeedBox
   end
 
   def seed_once(model, find_or_create_by, create_with = {})
-    record = model.where(find_or_create_by).first_or_initialize(create_with)
+    return if model.where(find_or_create_by).exists?
 
-    record.save
-
-    handle_errors(record, find_or_create_by, create_with)
+    seed(model, find_or_create_by, create_with)
   end
 
   def seed_file(name)
