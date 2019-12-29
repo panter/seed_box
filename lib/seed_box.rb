@@ -8,7 +8,7 @@ module SeedBox
   def seed(model, find_or_create_by, update_with = {})
     record = model.where(find_or_create_by).first_or_initialize
 
-    record.update_attributes(update_with)
+    record.update(update_with)
 
     handle_errors(record, find_or_create_by, update_with)
   end
