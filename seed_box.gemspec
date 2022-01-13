@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
                           with helper methods to enable omnipotent and easier
                           maintenance of seeds.}
   spec.homepage      = "https://github.com/panter/seed_box"
-  spec.license       = "LGPL-3.0"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
